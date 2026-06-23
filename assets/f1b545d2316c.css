@@ -170,7 +170,7 @@ input[type=number]::-webkit-outer-spin-button {
 .zoomMask {
     z-index: 1;
     position: absolute;
-    background: url("../images/mask.png") repeat scroll 0 0 transparent;
+    background: url("/assets/8f894c9f47aa.png") repeat scroll 0 0 transparent;
     cursor: move;
 }
 @media(max-width: 767px) {

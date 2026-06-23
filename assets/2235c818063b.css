@@ -12,8 +12,8 @@
     font-weight: 300;
     font-style: normal;
 
-    src: url('../fonts/Prometo-Light.eot');
-    src: local('Prometo-Light'), url('../fonts/Prometo-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Prometo-Light.woff2') format('woff2'), url('../fonts/Prometo-Light.woff') format('woff'), url('../fonts/Prometo-Light.ttf') format('truetype'), url('../fonts/Prometo-Light.svg#Prometo-Light') format('svg');
+    src: url('/assets/ff8c0a2e51ff.eot');
+    src: local('Prometo-Light'), url('/assets/ff8c0a2e51ff.eot?#iefix') format('embedded-opentype'), url('/assets/51635e9cba4d.woff2') format('woff2'), url('/assets/51635e9cba4d.woff') format('woff'), url('/assets/a12a2eada06b.ttf') format('truetype'), url('/assets/0eaca795f38d.svg') format('svg');
     font-display: swap;
 }
 @font-face
@@ -22,8 +22,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('../fonts/Prometo.eot');
-    src: local('Prometo'), url('../fonts/Prometo.eot?#iefix') format('embedded-opentype'), url('../fonts/Prometo.woff2') format('woff2'), url('../fonts/Prometo.woff') format('woff'), url('../fonts/Prometo.ttf') format('truetype'), url('../fonts/Prometo.svg#Prometo') format('svg');
+    src: url('/assets/01b5b8e6fb00.eot');
+    src: local('Prometo'), url('/assets/01b5b8e6fb00.eot') format('embedded-opentype'), url('/assets/cb25e8d9e99c.woff2') format('woff2'), url('/assets/0f19c5de8011.woff') format('woff'), url('/assets/b61360246305.ttf') format('truetype'), url('/assets/64795facf63d.svg') format('svg');
     font-display: swap;
 }
 @font-face
@@ -32,8 +32,8 @@
     font-weight: bold;
     font-style: normal;
 
-    src: url('../fonts/Prometo-Bold.eot');
-    src: local('Prometo-Bold'), url('../fonts/Prometo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Prometo-Bold.woff2') format('woff2'), url('../fonts/Prometo-Bold.woff') format('woff'), url('../fonts/Prometo-Bold.ttf') format('truetype'), url('../fonts/Prometo-Bold.svg#Prometo-Bold') format('svg');
+    src: url('/assets/60bab86326c6.eot');
+    src: local('Prometo-Bold'), url('/assets/60bab86326c6.eot') format('embedded-opentype'), url('/assets/f7ee53cd6f54.woff2') format('woff2'), url('/assets/f7ee53cd6f54.woff') format('woff'), url('/assets/97ae2f783e9d.ttf') format('truetype'), url('/assets/1abb371ac1ce.svg') format('svg');
     font-display: swap;
 }
 body
