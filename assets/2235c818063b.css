@@ -168,7 +168,7 @@ body
 
     height: 40px;
 
-    background: url(../images/header_top.png) no-repeat center;
+    background: url(/assets/9e3d56aaea5f.png) no-repeat center;
 }
 @media (max-width: 1199px)
 {
@@ -7672,7 +7672,7 @@ body
 {
     padding: 60px 0;
 
-    /*background: url(../images/contact_bg.jpg) no-repeat center fixed;*/
+    /*background: url(/assets/fc19b06fbc0f.jpg) no-repeat center fixed;*/
     background-size: cover;
 }
 @media (max-width: 1199px)
@@ -7681,7 +7681,7 @@ body
     {
         padding: 40px 0;
 
-        /*background: url(../images/contact_bg.jpg) no-repeat center;*/
+        /*background: url(/assets/fc19b06fbc0f.jpg) no-repeat center;*/
         background-size: cover;
     }
 }
@@ -9141,7 +9141,7 @@ nav
 	display: inline-block;
 	width: 44px;
 	height: 44px;
-	background: url(../images/language.png) no-repeat;
+	background: url(/assets/e27fae89ef3b.png) no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 	margin-left:30px;
