@@ -1,3 +1,21 @@
+/* Hide ALL Google Translate UI */
+.goog-te-banner-frame, .goog-te-banner-frame.skiptranslate,
+#goog-gt-tt, .goog-te-balloon-frame, .goog-tooltip, .goog-tooltip:hover,
+.goog-te-gadget, .goog-te-gadget-icon, .goog-te-menu-value,
+.goog-te-gadget-simple, .goog-te-gadget img,
+.skiptranslate.goog-te-gadget, #google_translate_element,
+.goog-logo-link, .goog-te-spinner-pos,
+iframe.goog-te-banner-frame, iframe.skiptranslate,
+.goog-te-menu-frame, .goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+body { top: 0 !important; position: static !important; }
+
 
 /* Hide Google Translate banner */
 .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, #goog-gt-tt, .goog-te-balloon-frame, .goog-tooltip, .goog-tooltip:hover { display: none !important; }
