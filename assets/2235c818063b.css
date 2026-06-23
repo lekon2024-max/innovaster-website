@@ -3451,14 +3451,14 @@ body
 {
     position: relative;
 
-    background: url(../images/choose_bg.jpg) no-repeat center fixed;
+    background: url(/assets/d4c6561c7f35.jpg) no-repeat center fixed;
     background-size: cover;
 }
 @media (max-width: 1199px)
 {
     .box-choose
     {
-        background: url(../images/choose_bg.jpg) no-repeat center;
+        background: url(/assets/d4c6561c7f35.jpg) no-repeat center;
         background-size: cover;
     }
 }
