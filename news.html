@@ -62,9 +62,9 @@
 <span class="btn-line"></span>
 </button>
 <div class="language">
-<a class="en" href="javascript:;" onclick="switchLang('en')" title="English">🇬🇧</a>
-<a class="es" href="javascript:;" onclick="switchLang('es')" title="Español">🇪🇸</a>
-<a class="ru" href="javascript:;" onclick="switchLang('ru')" title="Русский">🇷🇺</a>
+<a class="en" href="javascript:;" onclick="switchLang('en')" title="English"><span></span></a>
+<a class="es" href="javascript:;" onclick="switchLang('es')" title="Español"><span></span></a>
+<a class="ru" href="javascript:;" onclick="switchLang('ru')" title="Русский"><span></span></a>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
 <script type="text/javascript">
@@ -77,7 +77,6 @@ function googleTranslateInit() {
   }, 'google_translate_element');
 }
 function switchLang(lang) {
-  // Set cookie and reload to trigger Google Translate
   var d = new Date();
   d.setTime(d.getTime() + (365*24*60*60*1000));
   document.cookie = 'googtrans=/en/' + lang + ';expires=' + d.toUTCString() + ';path=/';
@@ -86,7 +85,6 @@ function switchLang(lang) {
   }
   location.reload();
 }
-// Load Google Translate
 (function() {
   var gt = document.createElement('script');
   gt.type = 'text/javascript';
