@@ -66,10 +66,39 @@
 <span class="btn-line"></span>
 </button>
 <div class="language">
-<a class="en" href="/">EN</a>
-<a class="es" href="/es/">ES</a>
-<a class="ru" href="/ru/">RU</a>
+<a class="en" href="javascript:;" onclick="switchLang('en')" title="English">🇬🇧</a>
+<a class="es" href="javascript:;" onclick="switchLang('es')" title="Español">🇪🇸</a>
+<a class="ru" href="javascript:;" onclick="switchLang('ru')" title="Русский">🇷🇺</a>
 </div>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,es,ru',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+function switchLang(lang) {
+  // Set cookie and reload to trigger Google Translate
+  var d = new Date();
+  d.setTime(d.getTime() + (365*24*60*60*1000));
+  document.cookie = 'googtrans=/en/' + lang + ';expires=' + d.toUTCString() + ';path=/';
+  if (lang === 'en') {
+    document.cookie = 'googtrans=/en/en;expires=' + d.toUTCString() + ';path=/';
+  }
+  location.reload();
+}
+// Load Google Translate
+(function() {
+  var gt = document.createElement('script');
+  gt.type = 'text/javascript';
+  gt.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gt, s);
+})();
+</script>
 <div class="cart"><a href="mailto:ken@innovaster-tech.com?subject=Product%20Inquiry"><span class="cart_total">0</span></a></div>
 <div class="find"></div>
 <div class="search-box search-lg">

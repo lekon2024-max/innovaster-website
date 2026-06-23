@@ -9135,52 +9135,26 @@ nav
 .header .language{
 	display: inline-block;
 	float: right;    
-	margin-top: 33px;
+	margin-top: 28px;
 }
 .header .language a{
 	display: inline-block;
+	font-size: 22px;
+	line-height: 44px;
 	width: 44px;
 	height: 44px;
-	background: url(/assets/e27fae89ef3b.png) no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
-	margin-left:30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-left: 4px;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	background: rgba(255,255,255,0.1);
 }
-.header .language a.es{
-	background-position: -44px 0;
+.header .language a:hover{
+	background: rgba(255,255,255,0.25);
+	transform: scale(1.1);
 }
-@media(max-width:1199px){
-	.header .language{
-		margin-top: 20px;
-	}
-	.header .language a{
-		width: 30px;
-		height: 30px;
-		margin: 0 3px;
-	}
-	.header .language a.es{
-		background-position: -30px 0;
-	}
-}
-.wrap-news-show .title-news-show h1{
-	display: block;
-}
-.wrap-news-show .title-news-show span.date{
-	margin-right: 20px;
-}
-.wrap-news-show .title-news-show span.date,
-.wrap-news-show .title-news-show .share{
-	display: inline-block;
-	vertical-align: middle;
-}
-.wrap-news-show .title-news-show .share{
-	margin-top: 14px;
-}
-.wrap-news-show .title-news-show .share span,
-.wrap-news-show .title-news-show .share .addthis_inline_share_toolbox{
-	display: inline-block;
-	vertical-align: middle;
-}
-.wrap-news-show .title-news-show .share span{
-	font-size: 16px;
-}
+.header .language a.en{ }
+.header .language a.es{ }
+.header .language a.ru{ }}
