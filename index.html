@@ -65,35 +65,32 @@
 <span class="btn-line"></span>
 </button>
 <div class="language">
-<button class="lang-btn active" data-lang="en" title="English"><span style="background-image:url(/assets/flag_us_fc148bd271.png)"></span></button>
-<button class="lang-btn" data-lang="es" title="Español"><span style="background-image:url(/assets/flag_es_ba5b7e2b05.png)"></span></button>
-<button class="lang-btn" data-lang="ru" title="Русский"><span style="background-image:url(/assets/flag_ru_dc5fb640a6.png)"></span></button>
+<button class="lang-btn active" data-lang="en" title="English" onclick="i18nSwitch('en')"><span style="background-image:url(/assets/flag_us_fc148bd271.png)"></span></button>
+<button class="lang-btn" data-lang="es" title="Español" onclick="i18nSwitch('es')"><span style="background-image:url(/assets/flag_es_ba5b7e2b05.png)"></span></button>
+<button class="lang-btn" data-lang="ru" title="Русский" onclick="i18nSwitch('ru')"><span style="background-image:url(/assets/flag_ru_dc5fb640a6.png)"></span></button>
 </div>
-<div id="google_translate_element"></div>
 <script>
-function googleTranslateInit() {
+function i18nSwitch(lang) {
+  var d = new Date(); d.setTime(d.getTime() + 365*24*60*60*1000);
+  document.cookie = 'googtrans=/en/' + lang + ';expires=' + d.toUTCString() + ';path=/';
+  if (lang === 'en') document.cookie = 'googtrans=/en/en;expires=' + d.toUTCString() + ';path=/';
+  location.reload();
+}
+(function(){
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  document.head.appendChild(s);
+})();
+function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'en',
     includedLanguages: 'en,es,ru',
     layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false,
-    multilanguagePage: true
+    autoDisplay: false
   }, 'google_translate_element');
 }
-function switchLang(lang) {
-  var f = document.querySelector('.goog-te-combo');
-  if (f) { f.value = lang; f.dispatchEvent(new Event('change')); return; }
-  var c = 'googtrans=/en/' + lang;
-  document.cookie = c + ';path=/';
-  if (lang === 'en') { document.cookie = 'googtrans=/en/en;path=/'; }
-  location.reload();
-}
-(function() {
-  var s = document.createElement('script');
-  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
-  document.head.appendChild(s);
-})();
 </script>
+<div id="google_translate_element" style="display:none;position:absolute;left:-9999px;"></div>
 
 <div class="find"></div>
 <div class="search-box search-lg">
