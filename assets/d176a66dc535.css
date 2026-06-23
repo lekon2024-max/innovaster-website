@@ -9146,9 +9146,7 @@ nav
 	background-size: cover;
 	margin-left:30px;
 }
-.header .language a.es{
-	background-position: -44px 0;
-}
+
 @media(max-width:1199px){
 	.header .language{
 		margin-top: 20px;
