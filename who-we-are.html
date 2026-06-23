@@ -61,38 +61,13 @@
 <span class="btn-line"></span>
 <span class="btn-line"></span>
 </button>
-<div class="language">
-<a class="en" href="javascript:;" onclick="switchLang('en')" title="English"><span></span></a>
-<a class="es" href="javascript:;" onclick="switchLang('es')" title="Español"><span></span></a>
-<a class="ru" href="javascript:;" onclick="switchLang('ru')" title="Русский"><span></span></a>
+<div class="language" id="langSwitcher">
+<button aria-label="English" class="lang-btn active" data-lang="en"><span style="background-image:url(/assets/flag_us_fc148bd271.png)"></span></button>
+<button aria-label="Español" class="lang-btn" data-lang="es"><span style="background-image:url(/assets/flag_es_ba5b7e2b05.png)"></span></button>
+<button aria-label="Русский" class="lang-btn" data-lang="ru"><span style="background-image:url(/assets/flag_ru_dc5fb640a6.png)"></span></button>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
-<script type="text/javascript">
-function googleTranslateInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,es,ru',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-function switchLang(lang) {
-  var d = new Date();
-  d.setTime(d.getTime() + (365*24*60*60*1000));
-  document.cookie = 'googtrans=/en/' + lang + ';expires=' + d.toUTCString() + ';path=/';
-  if (lang === 'en') {
-    document.cookie = 'googtrans=/en/en;expires=' + d.toUTCString() + ';path=/';
-  }
-  location.reload();
-}
-(function() {
-  var gt = document.createElement('script');
-  gt.type = 'text/javascript';
-  gt.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gt, s);
-})();
-</script>
+<script src="/assets/i18n.js"></script>
 <div class="cart"><a href="mailto:ken@innovaster-tech.com?subject=Product%20Inquiry"><span class="cart_total">0</span></a></div>
 <div class="find"></div>
 <div class="search-box search-lg">
@@ -108,7 +83,7 @@ function switchLang(lang) {
 <div class="product-nav">
 <ul>
 <li>
-<a href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
+<a data-i18n="nav.retorts" href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
 <div class="nav-down">
 <div class="container">
 <div class="nav-left">
@@ -324,35 +299,35 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <a href="/">Home</a>
 </li>
 <li class="active">
-<a href="/who-we-are.html">About Us</a>
+<a data-i18n="nav.about_us" href="/who-we-are.html">About Us</a>
 <div class="nav-list2">
 <ul class="container">
 <li>
-<a href="/who-we-are.html">Who We Are</a>
+<a data-i18n="nav.who_we_are" href="/who-we-are.html">Who We Are</a>
 </li>
 <li>
-<a href="/missions-values.html">Missions &amp; Values</a>
+<a data-i18n="nav.missions" href="/missions-values.html">Missions &amp; Values</a>
 </li>
 <li>
-<a href="/production-facilities.html">Production Facilities</a>
+<a data-i18n="nav.facilities" href="/production-facilities.html">Production Facilities</a>
 </li>
 <li>
-<a href="/what-we-do.html">What We Do</a>
+<a data-i18n="nav.what_we_do" href="/what-we-do.html">What We Do</a>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<a href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
+<a data-i18n="nav.retorts" href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
 </li>
 <li>
 <a href="/product/shuttle-and-loading-unloading-machine.html">Shuttle And Loading/Unloading Machine</a>
 </li>
 <li>
-<a href="canned-meat-1.html">Solutions</a>
+<a data-i18n="nav.solutions" href="canned-meat-1.html">Solutions</a>
 </li>
 <li>
-<a href="parts-and-services.html">Service</a>
+<a data-i18n="nav.service" href="parts-and-services.html">Service</a>
 <div class="nav-list2">
 <ul class="container">
 <li>
@@ -371,10 +346,10 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 </div>
 </li>
 <li>
-<a href="/news.html">Blog</a>
+<a data-i18n="nav.news" href="/news.html">Blog</a>
 </li>
 <li>
-<a href="/contact.html">Contact Us</a>
+<a data-i18n="nav.contact" href="/contact.html">Contact Us</a>
 </li>
 </ul>
 </div>
@@ -428,7 +403,7 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <div class="text-in">
 <div class="container">
 <div class="note">
-<h3>About Us</h3>
+<h3 data-i18n="nav.about_us">About Us</h3>
 <p>Innovaster, your partner for thermal process manufacturing focused on the field of food and beverage retort processing.</p>
 </div>
 </div>
@@ -440,7 +415,7 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <div class="about">
 <div class="title-in wow fadeInDown" data-wow-duration="1s">
 <span>01 </span>
-<h2>Who We Are</h2>
+<h2 data-i18n="nav.who_we_are">Who We Are</h2>
 </div>
 <div class="text wow fadeInUp" data-wow-duration="1s">
 <p>Innovaster designs, manufactures, installs and commissions complete sterilization lines for food processing industry.</p><p>Innovaster is a fast growing company of committed people with more than 20 years experience and passion. Innovaster has three associate factories who are the leaders in their respective fields for the upstream and downstream equipment, vegetable processing lines, sterilization retorts/autoclaves. All our factories are selected and integrated to keep the Innovaster as the innovative solution provider for the food processors. To this end, we at Innovaster remain invested in our Industry through our people and our equipment, to strive for innovative solutions and improvement in processing, packaging and thermal processing technology, not forgetting to deliver on cost effective sterilization solutions to our customers.</p><p><br/></p><p><strong style="font-size: 20px">Our focus is on 5 segments:</strong></p><p><img src="tpl/en_innovaster/assets/images/img/icon-about.jpg" style="margin-right: 10px;"/>Fish Processing</p><p><img src="tpl/en_innovaster/assets/images/img/icon-about.jpg" style="margin-right: 10px;"/>Cooking Solutions</p><p><img src="tpl/en_innovaster/assets/images/img/icon-about.jpg" style="margin-right: 10px;"/>In-Container Sterilization</p><p><img src="tpl/en_innovaster/assets/images/img/icon-about.jpg" style="margin-right: 10px;"/>Frying Solutions</p><p><img src="tpl/en_innovaster/assets/images/img/icon-about.jpg" style="margin-right: 10px;"/>Weighing Solutions</p><p><br/></p><p>Like many companies located in the “Food Machinery Valley” of Zhucheng of Shandong province, Innovaster was born as designer and manufacturer of Retorts equipment serving the food processing industry. We are relentless in our pursuit, that pursuit has involved both internal product development of our brands, as well as the active integration of cost-effective and optimal technology brands. Thanks to its experience in international markets, qualified employees and strong business partners, Innovaster has become the most reliable and preferred Retorts solution partner in food processing facilities for prestigious public and private corporations all over the world.</p><p><strong style="color: #8a011e">We will be happy to meet you at our operational headquarter in Zhucheng, China</strong></p> </div>
@@ -660,7 +635,7 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <li class="on">
 <div class="item item-1">
 <div class="title-foot">
-<h3>Contact Us</h3>
+<h3 data-i18n="nav.contact">Contact Us</h3>
 </div>
 <div class="info-down">
 <p class="email"><a href="mailto:ken@innovaster-tech.com">ken@innovaster-tech.com</a></p>
@@ -672,15 +647,15 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <li class="on">
 <div class="item item-2">
 <div class="title-foot">
-<h3>Quick Links</h3>
+<h3 data-i18n="footer.quick_links">Quick Links</h3>
 </div>
 <div class="info-down">
-<a href="who-we-are.html">About Us</a>
-<a href="/canned-meat-1.html">Solutions</a>
-<a href="/product/parts-and-services.html">Service</a>
-<a href="/news.html">Blog</a>
-<a href="/product-new.html">New Products</a>
-<a href="/success-stories.html">Success Stories</a>
+<a data-i18n="nav.about_us" href="who-we-are.html">About Us</a>
+<a data-i18n="nav.solutions" href="/canned-meat-1.html">Solutions</a>
+<a data-i18n="nav.service" href="/product/parts-and-services.html">Service</a>
+<a data-i18n="nav.news" href="/news.html">Blog</a>
+<a data-i18n="nav.product_new" href="/product-new.html">New Products</a>
+<a data-i18n="nav.success" href="/success-stories.html">Success Stories</a>
 </div>
 </div>
 </li>
