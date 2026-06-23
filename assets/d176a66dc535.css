@@ -1,3 +1,11 @@
+
+/* Hide Google Translate banner */
+.goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, #goog-gt-tt, .goog-te-balloon-frame, .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+body { top: 0 !important; position: static !important; }
+.goog-te-gadget { font-size: 0 !important; }
+.goog-te-gadget .goog-te-combo { font-size: 13px !important; }
+#google_translate_element { display: none; }
+
 /**
  * style.less
  * 层叠样式表

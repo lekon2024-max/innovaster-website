@@ -63,13 +63,36 @@
 <span class="btn-line"></span>
 <span class="btn-line"></span>
 </button>
-<div class="language" id="langSwitcher">
-<button aria-label="English" class="lang-btn active" data-lang="en"><span style="background-image:url(/assets/flag_us_fc148bd271.png)"></span></button>
-<button aria-label="Español" class="lang-btn" data-lang="es"><span style="background-image:url(/assets/flag_es_ba5b7e2b05.png)"></span></button>
-<button aria-label="Русский" class="lang-btn" data-lang="ru"><span style="background-image:url(/assets/flag_ru_dc5fb640a6.png)"></span></button>
+<div class="language">
+<button class="lang-btn active" data-lang="en" title="English"><span style="background-image:url(/assets/flag_us_fc148bd271.png)"></span></button>
+<button class="lang-btn" data-lang="es" title="Español"><span style="background-image:url(/assets/flag_es_ba5b7e2b05.png)"></span></button>
+<button class="lang-btn" data-lang="ru" title="Русский"><span style="background-image:url(/assets/flag_ru_dc5fb640a6.png)"></span></button>
 </div>
-<div id="google_translate_element" style="display:none;"></div>
-<script src="/assets/i18n.js"></script>
+<div id="google_translate_element"></div>
+<script>
+function googleTranslateInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,es,ru',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false,
+    multilanguagePage: true
+  }, 'google_translate_element');
+}
+function switchLang(lang) {
+  var f = document.querySelector('.goog-te-combo');
+  if (f) { f.value = lang; f.dispatchEvent(new Event('change')); return; }
+  var c = 'googtrans=/en/' + lang;
+  document.cookie = c + ';path=/';
+  if (lang === 'en') { document.cookie = 'googtrans=/en/en;path=/'; }
+  location.reload();
+}
+(function() {
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
+  document.head.appendChild(s);
+})();
+</script>
 
 <div class="find"></div>
 <div class="search-box search-lg">
@@ -85,7 +108,7 @@
 <div class="product-nav">
 <ul>
 <li>
-<a data-i18n="nav.retorts" href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
+<a href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
 <div class="nav-down">
 <div class="container">
 <div class="nav-left">
@@ -301,35 +324,35 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <a href="/index.html">Home</a>
 </li>
 <li>
-<a data-i18n="nav.about_us" href="/who-we-are.html">About Us</a>
+<a href="/who-we-are.html">About Us</a>
 <div class="nav-list2">
 <ul class="container">
 <li>
-<a data-i18n="nav.who_we_are" href="/who-we-are.html">Who We Are</a>
+<a href="/who-we-are.html">Who We Are</a>
 </li>
 <li>
-<a data-i18n="nav.missions" href="/missions-values.html">Missions &amp; Values</a>
+<a href="/missions-values.html">Missions &amp; Values</a>
 </li>
 <li>
-<a data-i18n="nav.facilities" href="/production-facilities.html">Production Facilities</a>
+<a href="/production-facilities.html">Production Facilities</a>
 </li>
 <li>
-<a data-i18n="nav.what_we_do" href="/what-we-do.html">What We Do</a>
+<a href="/what-we-do.html">What We Do</a>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<a data-i18n="nav.retorts" href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
+<a href="/product/retorts-autoclaves.html">Retorts/Autoclaves</a>
 </li>
 <li>
 <a href="/product/shuttle-and-loading-unloading-machine.html">Shuttle And Loading/Unloading Machine</a>
 </li>
 <li>
-<a data-i18n="nav.solutions" href="/canned-meat-1.html">Solutions</a>
+<a href="/canned-meat-1.html">Solutions</a>
 </li>
 <li>
-<a data-i18n="nav.service" href="/parts-and-services.html">Service</a>
+<a href="/parts-and-services.html">Service</a>
 <div class="nav-list2">
 <ul class="container">
 <li>
@@ -348,10 +371,10 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 </div>
 </li>
 <li class="active">
-<a data-i18n="nav.news" href="/news.html">Blog</a>
+<a href="/news.html">Blog</a>
 </li>
 <li>
-<a data-i18n="nav.contact" href="/contact.html">Contact Us</a>
+<a href="/contact.html">Contact Us</a>
 </li>
 </ul>
 </div>
@@ -404,7 +427,7 @@ The global handling system can be monitored by a basket/pallet tracking system.<
 <div class="text-in">
 <div class="container">
 <div class="note">
-<h3 data-i18n="nav.news">Blog</h3>
+<h3>Blog</h3>
 <p>Share in our knowledge, together we achieve the best results. You can explore our latest news on this page: trade fairs info, new installations, retorts technical developments.</p>
 </div>
 </div>
@@ -476,7 +499,7 @@ elevated temperatures. </p><p>Here we're only talking about the commercial ster
 <li class="on">
 <div class="item item-1">
 <div class="title-foot">
-<h3 data-i18n="nav.contact">Contact Us</h3>
+<h3>Contact Us</h3>
 </div>
 <div class="info-down">
 <p class="email"><a href="mailto:ken@innovaster-tech.com">ken@innovaster-tech.com</a></p>
@@ -488,15 +511,15 @@ elevated temperatures. </p><p>Here we're only talking about the commercial ster
 <li class="on">
 <div class="item item-2">
 <div class="title-foot">
-<h3 data-i18n="footer.quick_links">Quick Links</h3>
+<h3>Quick Links</h3>
 </div>
 <div class="info-down">
-<a data-i18n="nav.about_us" href="/who-we-are.html">About Us</a>
-<a data-i18n="nav.solutions" href="/canned-meat-1.html">Solutions</a>
-<a data-i18n="nav.service" href="/product/parts-and-services.html">Service</a>
-<a data-i18n="nav.news" href="/news.html">Blog</a>
-<a data-i18n="nav.product_new" href="/product-new.html">New Products</a>
-<a data-i18n="nav.success" href="/success-stories.html">Success Stories</a>
+<a href="/who-we-are.html">About Us</a>
+<a href="/canned-meat-1.html">Solutions</a>
+<a href="/product/parts-and-services.html">Service</a>
+<a href="/news.html">Blog</a>
+<a href="/product-new.html">New Products</a>
+<a href="/success-stories.html">Success Stories</a>
 </div>
 </div>
 </li>
